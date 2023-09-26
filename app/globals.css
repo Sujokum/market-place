@@ -33,9 +33,25 @@
 .textPrimary{
   color: #EB1616 !important;
 }
+.bgPrimary{
+  background-color: #EB1616 !important;
+}
 .bgDark{
   background : #000000 !important;
   
+}
+
+.table{
+  --bs-table-color : none !important;
+  --bs-table-bg : none !important;
+  --bs-table-border-color : black !important;
+}
+.table-hover>tbody>tr:hover>*{
+  
+  --bs-table-color-state : #6C7293 !important;
+}
+.table tbody td{
+  color : '#6C7293' !important;
 }
 
 /*** Spinner ***/
