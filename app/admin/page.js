@@ -1,16 +1,18 @@
 'use client'
-import React , {useState } from 'react'
+import React , {useState } from 'react';
+
 import SideBar from '@/components/Admin/sidebar/SideBar';
 import TopNav from '@/components/Admin/topNav/TopNav';
 import PieChart from '@/components/Admin/pieChart/PieChart';
 import AreaChart from '@/components/Admin/areaChart/AreaChart';
 import MessageSec from '@/components/Admin/messageSec/MessageSec';
-import Calender from '@/components/Admin/calender/Calender';
+import Calenders from '@/components/Admin/calender/Calender';
 import Todo from '@/components/Admin/todo/Todo';
-
+import { usePathname} from 'next/navigation'
+import UpperArrow from '@/components/Admin/upperArrow/UpperArrow';
 const Admin = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const params = usePathname()
     const data = {
       labels: ['Amazon', 'Walmart', 'Ali Express', 'eBay'],
       values: [12, 11, 5, 9], // Replace with your data
@@ -32,7 +34,7 @@ const Admin = () => {
     
 
 
-    <SideBar isOpen = {isOpen}/>
+    <SideBar isOpen = {isOpen} params = {params}/>
   
 
 
@@ -324,7 +326,7 @@ const Admin = () => {
                 {/* Message Section End  */}
 
                     {/* Calender Start  */}
-                    <Calender/>
+                    <Calenders/>
                   {/* Calender ENd  */}
 
 {/* Todo List Start  */}
@@ -337,7 +339,7 @@ const Admin = () => {
      
     </div>
    
-    <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top"><i className="bi bi-arrow-up"></i></a>
+    <UpperArrow/>
 </div>
   )
 }

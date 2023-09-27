@@ -11,7 +11,7 @@ const MessageSec = () => {
                 fontSize : '18px'
             }} className='textPrimary' href="">Show All</a>
         </div>
-        <div className="d-flex align-items-center border-bottom py-3">
+        <div className="d-flex align-items-center border-bottom border-dark py-3">
             <img className="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                 style= {{width: "40px", height: "40px"}} />
             <div className="w-100 ms-3">
@@ -22,7 +22,7 @@ const MessageSec = () => {
                 <span className = 'lightGray'>Short message goes here...</span>
             </div>
         </div>
-        <div className="d-flex align-items-center border-bottom py-3">
+        <div className="d-flex align-items-center border-bottom border-dark py-3">
             <img className="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                  style= {{width: "40px", height: "40px"}} />
             <div className="w-100 ms-3">
@@ -33,7 +33,7 @@ const MessageSec = () => {
                 <span className = 'lightGray' >Short message goes here...</span>
             </div>
         </div>
-        <div className="d-flex align-items-center border-bottom py-3">
+        <div className="d-flex align-items-center border-bottom border-dark py-3">
             <img className="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
                  style= {{width: "40px", height: "40px"}} />
             <div className="w-100 ms-3">

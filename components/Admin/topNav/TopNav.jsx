@@ -1,5 +1,6 @@
 import React from 'react'
-
+import UserImage from '../../../public/img/user.jpg'
+import Image from 'next/image'
 const TopNav = ({setIsOpen , isOpen}) => {
   return (
     <nav className="navbar navbar-expand bgSecondary navbar-dark sticky-top px-4 py-0">
@@ -21,8 +22,8 @@ const TopNav = ({setIsOpen , isOpen}) => {
                     <div className="dropdown-menu dropdown-menu-end bgSecondary border-0 rounded-0 rounded-bottom m-0">
                         <a href="#" className="dropdown-item">
                             <div className="d-flex align-items-center">
-                                <img className="rounded-circle" src="img/user.jpg" alt=""
-                                    style= {{width: "40px", height: "40px"}} />
+                            <Image width={500} height={500} className="rounded-circle me-lg-2" src={UserImage} alt="profile pic"
+                             style= {{width: "40px", height: "40px"}} />
                                 <div className="ms-2">
                                     <h6 className="fw-normal text-light mb-0">someone send you a message</h6>
                                     <small>15 minutes ago</small>
@@ -32,8 +33,8 @@ const TopNav = ({setIsOpen , isOpen}) => {
                         <hr className="dropdown-divider" />
                         <a href="#" className="dropdown-item">
                             <div className="d-flex align-items-center">
-                                <img className="rounded-circle" src="img/user.jpg" alt=""
-                                     style= {{width: "40px", height: "40px"}} />
+                            <Image width={500} height={500} className="rounded-circle me-lg-2" src={UserImage} alt="profile pic"
+                             style= {{width: "40px", height: "40px"}} />
                                 <div className="ms-2">
                                     <h6 className="fw-normal text-light mb-0">Jhon send you a message</h6>
                                     <small>15 minutes ago</small>
@@ -43,8 +44,8 @@ const TopNav = ({setIsOpen , isOpen}) => {
                         <hr className="dropdown-divider" />
                         <a href="#" className="dropdown-item">
                             <div className="d-flex align-items-center">
-                                <img className="rounded-circle" src="img/user.jpg" alt=""
-                                     style= {{width: "40px", height: "40px"}} />
+                            <Image width={500} height={500} className="rounded-circle me-lg-2" src={UserImage} alt="profile pic"
+                             style= {{width: "40px", height: "40px"}} />
                                 <div className="ms-2">
                                     <h6 className="fw-normal text-light mb-0">Jhon send you a message</h6>
                                     <small>15 minutes ago</small>
@@ -81,7 +82,7 @@ const TopNav = ({setIsOpen , isOpen}) => {
                 </div>
                 <div className="nav-item dropdown">
                     <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                        <img className="rounded-circle me-lg-2" src="img/user.jpg" alt=""
+                        <Image width={500} height={500} className="rounded-circle me-lg-2" src={UserImage} alt="profile pic"
                              style= {{width: "40px", height: "40px"}} />
                         <span className="d-none d-lg-inline-flex">Muhammad Azeem</span>
                     </a>

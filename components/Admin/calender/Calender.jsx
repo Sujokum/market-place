@@ -1,6 +1,7 @@
-import React from 'react'
-
-const Calender = () => {
+import React , {useState} from 'react'
+import Calendar from 'react-calendar';
+const Calenders = () => {
+  const [value, onChange] = useState(new Date())
   return (
     <div className="col-sm-12 col-md-6 col-xl-4">
     <div className="h-100 bgSecondary rounded p-4">
@@ -11,10 +12,10 @@ const Calender = () => {
                 fontSize : '18px'
             }} className='textPrimary' href="">Show All</a>
         </div>
-        <div id="calender"></div>
+        <Calendar className='w-100 mt-5 text-center bg-none d-flex justify-content-center align-items-center flex-column text-light'  />
     </div>
 </div>
   )
 }
 
-export default Calender
+export default Calenders

@@ -13,10 +13,10 @@ const Todo = () => {
         </div>
         <div className="d-flex mb-2">
             <input className="form-control searchInput border-0" type="text" placeholder="Enter task" />
-            <button type="button" className="btn btn-primary ms-2">Add</button>
+            <button type="button" className="btn bgPrimary text-light  ms-2">Add</button>
         </div>
-        <div className="d-flex align-items-center border-bottom py-2">
-            <input className="form-check-input bgDark m-0" type="checkbox" />
+        <div className="d-flex align-items-center border-bottom border-dark py-2">
+            <input className="form-check-input m-0" type="checkbox" />
             <div className="w-100 ms-3">
                 <div className="d-flex w-100 align-items-center justify-content-between">
                     <span className = 'lightGray' >Short task goes here...</span>
@@ -24,8 +24,8 @@ const Todo = () => {
                 </div>
             </div>
         </div>
-        <div className="d-flex align-items-center border-bottom py-2">
-            <input className="form-check-input bgDark m-0" type="checkbox" />
+        <div className="d-flex align-items-center border-bottom border-dark py-2">
+            <input className="form-check-input m-0" type="checkbox" />
             <div className="w-100 ms-3">
                 <div className="d-flex w-100 align-items-center justify-content-between">
                     <span className = 'lightGray' >Short task goes here...</span>
@@ -33,8 +33,8 @@ const Todo = () => {
                 </div>
             </div>
         </div>
-        <div className="d-flex align-items-center border-bottom py-2">
-            <input className="form-check-input bgDark m-0" type="checkbox" defaultChecked />
+        <div className="d-flex align-items-center border-bottom border-dark py-2">
+            <input className="form-check-input m-0" type="checkbox" defaultChecked />
             <div className="w-100 ms-3">
                 <div className="d-flex w-100 align-items-center justify-content-between">
                     <span className='lightGray' ><del>Short task goes here...</del></span>
@@ -42,8 +42,8 @@ const Todo = () => {
                 </div>
             </div>
         </div>
-        <div className="d-flex align-items-center border-bottom py-2">
-            <input className="form-check-input bgDark m-0" type="checkbox"/>
+        <div className="d-flex align-items-center border-bottom border-dark py-2">
+            <input className="form-check-input m-0" type="checkbox"/>
             <div className="w-100 ms-3">
                 <div className="d-flex w-100 align-items-center justify-content-between">
                     <span className='lightGray' >Short task goes here...</span>
@@ -52,7 +52,7 @@ const Todo = () => {
             </div>
         </div>
         <div className="d-flex align-items-center pt-2">
-            <input className="form-check-input active bgPrimary text-light border border-danger m-0" type="checkbox"/>
+            <input className="form-check-input  m-0" type="checkbox"/>
             <div className="w-100 ms-3">
                 <div className="d-flex w-100 align-items-center justify-content-between">
                     <span className='lightGray' >Short task goes here...</span>
