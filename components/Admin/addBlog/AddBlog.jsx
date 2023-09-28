@@ -1,5 +1,6 @@
 import React , {useEffect} from 'react'
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
+// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 const AddBlog = () => {
     useEffect(()=>{
         const fileInput = document.getElementById('formFile');
@@ -23,17 +24,23 @@ const AddBlog = () => {
 
   
     },[])
-    useEffect(()=>{
-        console.log('hello')
-        ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .then( editor => {
-            editor;
-        } )
-        .catch( error => {
-            console.error( 'There was a problem initializing the editor.', error );
-        } );
-    },[])
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            // Client-side-only code
+            console.log('hello');
+
+            import('@ckeditor/ckeditor5-build-classic').then(({ default: ClassicEditor }) => {
+                ClassicEditor
+                    .create(document.querySelector('#editor'))
+                    .then(editor => {
+                        // Your editor initialization code here
+                    })
+                    .catch(error => {
+                        console.error('There was a problem initializing the editor.', error);
+                    });
+            });
+        }
+    }, []);
   return (
     <div class="container-fluid pt-4 px-4">
     <div class=" bgSecondary rounded row  align-items-center justify-content-center  p-4">
@@ -43,18 +50,18 @@ const AddBlog = () => {
                     <h6 class="mb-4 text-light">Add Featured Product</h6>
                     <form>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label lightGray">Title</label>
+                            <label htmlFor="exampleInputEmail1" class="form-label lightGray">Title</label>
                             <input type="text" class="form-control bgDark border-0" id="exampleInputEmail1"
                                 aria-describedby="emailHelp" />
 
                         </div>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label lightGray">Featured Image</label>
+                            <label htmlFor="formFile" class="form-label lightGray">Featured Image</label>
                             <input class="form-control bg-dark border-0" type="file" id="formFile" />
                         </div>
 
                         <div class="mb-3">
-                            <label for="imagePreview" class="form-label lightGray">Image Preview:</label>
+                            <label htmlFor="imagePreview" class="form-label lightGray">Image Preview:</label>
                             <img src="" alt="Image Preview" id="imagePreview"
                                 style={{maxWidth: "100%" , maxHeight: "200px"}} />
                         </div>
@@ -63,7 +70,9 @@ const AddBlog = () => {
 
                         </script>
                         <div class="mb-3">
-                            <div id="editor"></div>
+                            <div id='editor' >
+
+                            </div>
                 
                         </div>
 
