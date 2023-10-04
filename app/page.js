@@ -1,14 +1,9 @@
-"use client"
+import React from 'react'
 
-
-const Home = () => {
-
-
-
-
+const page = () => {
   return (
-<h1>hello Welcome Home</h1>
+    <div>page</div>
   )
 }
 
-export default Home
+export default page
