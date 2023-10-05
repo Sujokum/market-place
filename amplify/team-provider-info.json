@@ -10,14 +10,6 @@
       "StackName": "amplify-marketplace-dev-10954",
       "StackId": "arn:aws:cloudformation:eu-north-1:190876140592:stack/amplify-marketplace-dev-10954/fdf02c00-62f1-11ee-93e1-0aaba880808e",
       "AmplifyAppId": "d1r5wmk7e1045e"
-    },
-    "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d1r5wmk7e1045e",
-          "type": "manual"
-        }
-      }
     }
   }
 }
