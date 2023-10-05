@@ -1,6 +1,6 @@
 
 import React , {useEffect , useRef} from 'react'
-import Chart from 'chart.js';
+import Chart from 'chart.js/auto';
 const PieChart = ({data}) => {
     const chartRef = useRef(null);
 const chartInstance = useRef(null);
