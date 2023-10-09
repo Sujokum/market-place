@@ -1,5 +1,8 @@
 'use client'
-import React , {useState } from 'react';
+import React , {useState  } from 'react';
+
+import {  Auth } from 'aws-amplify'
+
 
 import SideBar from '@/components/Admin/sidebar/SideBar';
 import TopNav from '@/components/Admin/topNav/TopNav';
@@ -10,8 +13,13 @@ import Calenders from '@/components/Admin/calender/Calender';
 import Todo from '@/components/Admin/todo/Todo';
 import { usePathname} from 'next/navigation'
 import UpperArrow from '@/components/Admin/upperArrow/UpperArrow';
+
 const Admin = () => {
+        
+
     const [isOpen, setIsOpen] = useState(false);
+
+
     const params = usePathname()
     const data = {
       labels: ['Amazon', 'Walmart', 'Ali Express', 'eBay'],
@@ -22,19 +30,24 @@ const Admin = () => {
       values1: [100, 150 , 200 , 250 , 270 , 280 , 300],
       values2: [50, 100, 150, 120, 80 , 200 , 150], // Replace with your data
     }
+
+
+
+    const handleSignOut = async ()=>{
+        try {
+                await Auth.signOut();
+         } catch (error) {
+                console.log('error signing out: ', error);
+         }
+    }
+
+
+
   return (
-    <div className="container-fluid position-relative d-flex p-0">
-    
-    {/* <div id="spinner"
-        className="show bgDark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div className="spinner-border textPrimary" style={{width: "3rem" , height: "3rem"}} role="status">
-            <span className="sr-only">Loading...</span>
-        </div>
-    </div> */}
-    
-
-
-    <SideBar isOpen = {isOpen} params = {params}/>
+ <>
+ <SideBar isOpen = {isOpen} params = {params}/>
+ 
+ 
   
 
 
@@ -44,6 +57,7 @@ const Admin = () => {
 
     <TopNav isOpen={isOpen} setIsOpen={setIsOpen} />
         
+    <button onClick={handleSignOut} >signOut</button>
 
         <div className="container-fluid text-light pt-4 px-4">
             <div className="row g-4">
@@ -334,14 +348,14 @@ const Admin = () => {
 {/* Todo List End  */}
 
 
+     <UpperArrow/>
             </div>
         </div>
-     
     </div>
-   
-    <UpperArrow/>
-</div>
+    </>
+    
+
   )
 }
 
-export default Admin
+export default Admin;

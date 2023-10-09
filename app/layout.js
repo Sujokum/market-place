@@ -1,7 +1,8 @@
+
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './globals.css'
 
-import Script from 'next/script'
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,6 +10,9 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+
+
   return (
     
     <html lang="en">
