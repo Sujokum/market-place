@@ -31,7 +31,7 @@ app.use(function(req, res, next) {
  * Example get method *
  **********************/
 
-app.get('/api', function(req, res) {
+app.get('/api/blog', function(req, res) {
   // Add your code here
   res.json({success: 'get call succeed!', url: req.url});
 });

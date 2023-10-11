@@ -1,0 +1,29 @@
+.app{
+    width : 100%;
+    height : 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    flex-direction: column;
+    color: rgb(246, 44, 44);
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.423);
+}
+.app button{
+    padding: 5px 8px;
+    background-color: rgb(246, 44, 44) ;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.423) ;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    color: white;
+}
+.app button:hover{
+    padding: 5px 8px;
+    background-color: rgb(44, 246, 111) ;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.423) ;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    color: white;
+}

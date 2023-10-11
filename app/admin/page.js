@@ -64,8 +64,7 @@ const Admin = () => {
     <div className={`content ${isOpen ? 'open' : ''} `}>
 
     <TopNav isOpen={isOpen} setIsOpen={setIsOpen} />
-        
-    <button onClick={handleSignOut} >signOut</button>
+
 
         <div className="container-fluid text-light pt-4 px-4">
             <div className="row g-4">

@@ -1,7 +1,19 @@
 import React from 'react'
 import UserImage from '../../../public/img/user.jpg'
 import Image from 'next/image'
+import { Auth } from 'aws-amplify';
+
+
 const TopNav = ({setIsOpen , isOpen}) => {
+    
+    async function signOut() {
+        try {
+          await Auth.signOut({ global: true });
+        } catch (error) {
+          console.log('error signing out: ', error);
+        }
+      }
+
   return (
     <nav className="navbar navbar-expand bgSecondary  navbar-dark sticky-top px-4 py-0">
             <a href="index.html" className="navbar-brand d-flex d-lg-none me-4">
@@ -89,7 +101,7 @@ const TopNav = ({setIsOpen , isOpen}) => {
                     <div className="dropdown-menu dropdown-menu-end bgSecondary border-0 rounded-0 rounded-bottom m-0">
                         <a href="#" className="dropdown-item">My Profile</a>
                         <a href="#" className="dropdown-item">Settings</a>
-                        <a href="#" className="dropdown-item">Log Out</a>
+                        <a href="#" className="dropdown-item" onClick={signOut}>Log Out</a>
                     </div>
                 </div>
             </div>
