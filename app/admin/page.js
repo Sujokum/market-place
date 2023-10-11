@@ -1,5 +1,5 @@
 'use client'
-import React , {useState  } from 'react';
+import React , {useState , useEffect } from 'react';
 
 import {  Auth } from 'aws-amplify'
 
@@ -41,7 +41,15 @@ const Admin = () => {
          }
     }
 
+    const getLocalData = ()=>{
+        const data = localStorage.getItem('aws-group')
+        console.log(data)
+    }
 
+
+    useEffect(()=>{
+        getLocalData()
+    },[])
 
   return (
  <>

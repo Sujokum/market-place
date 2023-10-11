@@ -1,4 +1,20 @@
 {
+  "api": {
+    "api863ad237": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "marketplace8e8fb477"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "marketplacedd8d7393": {
       "customAuth": false,
@@ -23,6 +39,31 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "marketplace8e8fb477": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_marketplace8e8fb477_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "marketplace8e8fb477"
+        }
+      ]
+    },
+    "AMPLIFY_function_marketplace8e8fb477_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "marketplace8e8fb477"
+        }
+      ]
     }
   }
 }

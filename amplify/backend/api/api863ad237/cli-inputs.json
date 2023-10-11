@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/api": {
+      "name": "/api",
+      "lambdaFunction": "marketplace8e8fb477",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
