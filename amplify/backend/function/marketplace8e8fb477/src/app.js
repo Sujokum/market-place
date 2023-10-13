@@ -30,6 +30,8 @@ app.use(function(req, res, next) {
 /**********************
  * Example get method *
  **********************/
+// API END POINT 
+// https://yz9wziqo31.execute-api.eu-north-1.amazonaws.com/master/api/allblogs
 
 app.get('/api/blog', function(req, res) {
   // Add your code here
