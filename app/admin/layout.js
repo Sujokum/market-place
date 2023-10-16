@@ -1,5 +1,6 @@
 'use client'
 import React , {useState , useEffect} from "react";
+import ReduxProvider from "@/redux/ReduxProvider";
 import { Hub } from "aws-amplify";
 import { useRouter } from 'next/navigation'
 import { Amplify ,  Auth} from 'aws-amplify'
@@ -77,10 +78,13 @@ if(!admin){
 
 
 
-    return <section className="container-fluid position-relative d-flex p-0">
+    return <ReduxProvider>
+
+     <section className="container-fluid position-relative d-flex p-0">
         
         
         {children}
   
         </section>
+    </ReduxProvider>
   }

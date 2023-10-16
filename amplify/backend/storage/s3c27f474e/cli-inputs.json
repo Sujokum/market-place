@@ -1,0 +1,16 @@
+{
+  "resourceName": "s3c27f474e",
+  "policyUUID": "c27f474e",
+  "bucketName": "marketplace90408b766ed9484795a6ad3807353667",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
