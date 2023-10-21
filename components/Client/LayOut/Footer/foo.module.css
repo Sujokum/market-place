@@ -8,5 +8,10 @@
 
 .link{
     text-decoration: none;
+    font-size: 16px;
     color: #fff;
+}
+
+.icon{
+    color: #FA8B02;
 }

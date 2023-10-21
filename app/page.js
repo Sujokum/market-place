@@ -1,13 +1,13 @@
 'use client'
 import React from 'react'
 import LayOut from '@/components/Client/LayOut/LayOut'
+import Banner from '@/components/Client/banner/Banner'
 const page = () => {
  
 
   return (
     <LayOut>
-
-    <h1>Hello</h1>
+     <Banner/>
     </LayOut>
 
   )
