@@ -32,6 +32,32 @@ const AWS = require('aws-sdk');
 const dynamoDb = new AWS.DynamoDB.DocumentClient()
 
 
+const nodemailer = require('nodemailer');
+
+// const smtpTransport = require('nodemailer-smtp-transport');
+const transporter = nodemailer.createTransport({
+  service : 'Gmail',
+  auth: {
+      user: 'helpermall245@gmail.com',
+      pass: 'fjdhgibpnmiwvcdo'
+  }
+});
+
+
+// const transporter = nodemailer.createTransport(
+//   smtpTransport({
+//     service: 'Gmail',
+//     auth: {
+//       user: 'suneelahmed413@gmail.com',
+//       pass: '$uj0Ah321meed#babila061',
+//     },
+//   })
+// );
+
+
+
+
+
 // API END POINT 
 // https://yz9wziqo31.execute-api.eu-north-1.amazonaws.com/master/api/blog
 
@@ -272,13 +298,58 @@ app.delete('/api/products/:id', async function(req, res) {
 });
 
 
+/****************************
+* Post (Send Offer) *
+****************************/
+
+app.post('/api/sendOffer', async (req, res) => {
+  const { to, subject, text } = req.body;
+
+      const mailOptions = {
+        from: 'helpermall245@gmail.com',
+        to: to,
+        subject: subject ,
+        text: text,
+      };
+     transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.error('Error sending email:', error);
+          res.status(500).send(error);
+        } else {
+          console.log('Email sent:', info.response);
+          res.send('Email sent successfully');
+        }
+      });
+
+  
+
+});
 
 
 
 
+app.post('/api/sendMessage', async (req, res) => {
+  const { to, subject, text } = req.body;
 
+      const mailOptions = {
+        from: 'helpermall245@gmail.com',
+        to: to,
+        subject: subject ,
+        text: text,
+      };
+     transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.error('Error sending email:', error);
+          res.status(500).send(error);
+        } else {
+          console.log('Email sent:', info.response);
+          res.send('Email sent successfully');
+        }
+      });
 
+  
 
+});
 
 
 

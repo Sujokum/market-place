@@ -1,10 +1,31 @@
-import React from 'react'
+import React , {useEffect , useState} from 'react'
 import UserImage from '../../../public/img/user.jpg'
 import Image from 'next/image'
 import { Auth } from 'aws-amplify';
 
 
 const TopNav = ({setIsOpen , isOpen}) => {
+    const [userDetails , setUserDetails] = useState({
+        name : '',
+    }) 
+
+    const getData = ()=>{
+        try {
+            const username = localStorage.getItem('aws-username');
+
+            setUserDetails({
+                name : JSON.parse(username),
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
+
+    useEffect(()=>{
+        getData()
+    },[])
     
     async function signOut() {
         try {
@@ -96,7 +117,7 @@ const TopNav = ({setIsOpen , isOpen}) => {
                     <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         <Image width={500} height={500} className="rounded-circle me-lg-2" src={UserImage} alt="profile pic"
                              style= {{width: "40px", height: "40px"}} />
-                        <span className="d-none d-lg-inline-flex">Muhammad Azeem</span>
+                        <span className="d-none d-lg-inline-flex">{userDetails.name}</span>
                     </a>
                     <div className="dropdown-menu dropdown-menu-end bgSecondary border-0 rounded-0 rounded-bottom m-0">
                         <a href="#" className="dropdown-item">My Profile</a>

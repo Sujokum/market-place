@@ -15,8 +15,8 @@ const MessageSend = () => {
         <SideBar params = {params} isOpen = {isOpen} />
         <div className={`content ${isOpen ? 'open' : ''} `}>
   
-  <TopNav isOpen={isOpen} setIsOpen={setIsOpen} />
-      <MsgSend heading={'Send Message'}/>
+  <TopNav isOpen={isOpen} setIsOpen={setIsOpen}  />
+      <MsgSend heading={'Send Message'} sendOffer = {false}/>
       </div>
       <UpperArrow/>
       </div>

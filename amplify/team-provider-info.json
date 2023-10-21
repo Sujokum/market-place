@@ -18,7 +18,7 @@
       "function": {
         "marketplace8e8fb477": {
           "deploymentBucketName": "amplify-marketplace-master-160149-deployment",
-          "s3Key": "amplify-builds/marketplace8e8fb477-796f706f45523744317a-build.zip"
+          "s3Key": "amplify-builds/marketplace8e8fb477-626a5658515a6d4f7379-build.zip"
         }
       },
       "api": {

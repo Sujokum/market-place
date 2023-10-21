@@ -10,7 +10,7 @@ Amplify.configure(awsConfig)
 
 const page = () => {
   return (
-    <div className="container-fluid bgDark position-relative d-flex p-0">
+    <div className="container-fluid bg-white position-relative d-flex p-0">
 <SignIn/>
 </div>
   )

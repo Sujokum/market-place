@@ -9,14 +9,17 @@ import MsgSend from '@/components/Admin/msgSend/MsgSend'
 const page = () => {
     const params = usePathname()
     const [isOpen, setIsOpen] = useState(false);
-    console.log(params)
+   
+   
+
+  
     return (
       <div className="container-fluid position-relative d-flex p-0">
         <SideBar params = {params} isOpen = {isOpen} />
         <div className={`content ${isOpen ? 'open' : ''} `}>
   
   <TopNav isOpen={isOpen} setIsOpen={setIsOpen} />
-      <MsgSend heading = {'Send Offer Alert'} />
+      <MsgSend heading = {'Send Offer Alert'}    sendOffer = {'OfferSend'} />
       </div>
       <UpperArrow/>
       </div>

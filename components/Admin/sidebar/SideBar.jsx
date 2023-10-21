@@ -1,8 +1,31 @@
-import React from 'react'
+import React , {useEffect, useState} from 'react'
 import Link from 'next/link'
 import UserImage from '../../../public/img/user.jpg'
 import Image from 'next/image'
 const SideBar = ({isOpen , params}) => {
+    const [userDetails , setUserDetails] = useState({
+        name : '',
+        group : ''
+    }) 
+
+    const getData = ()=>{
+        try {
+            const username = localStorage.getItem('aws-username');
+            const group = localStorage.getItem('aws-groups');
+            setUserDetails({
+                name : JSON.parse(username),
+                group : JSON.parse(group)
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
+
+    useEffect(()=>{
+        getData()
+    },[])
 
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}  pe-4 pb-3`}>
@@ -16,8 +39,8 @@ const SideBar = ({isOpen , params}) => {
                 </div>
             </div>
             <div className="ms-3">
-                <h6 className="mb-0">Muhammad Azeem</h6>
-                <span className='lightGray' >Admin</span>
+                <h6 className="mb-0">{userDetails.name}</h6>
+                <span className='lightGray' >{userDetails.name}</span>
             </div>
         </div>
         <div className="navbar-nav w-100">

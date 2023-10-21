@@ -1,3 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+
+.OpenSan{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.signUpBtn{
+  background-color: #FA8B02;
+  border : none;
+  outline: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600 !important;
+  padding: 5px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+
+}
+.signUpBtn:hover{
+  background-color: #0075FF;
+  color: #ffffff;
+ 
+}
+
+.nav-link{
+  color: #474747 !important;
+  font-weight: 600 !important;
+}
+.nav-link:hover{
+  border-bottom: 1px solid #FA8B02;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /********** Template CSS **********/
 
 
